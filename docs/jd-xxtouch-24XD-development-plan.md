@@ -1,5 +1,7 @@
 # 24XD（下单）开发计划（函数级任务与验证）
 
+逐步实施与核对表见 [`24XD-implementation-guide.md`](24XD-implementation-guide.md)。
+
 本文档对应源码树 [`soucre/24XD/24XD.xpp`](../soucre/24XD/24XD.xpp)。入口由 [`Info.lua`](../soucre/24XD/24XD.xpp/Info.lua) 指定为 **`main.xxt`**，界面为 **`interface.xuic`**（另有 **`xui-sub.xuic`**）。
 
 业务脚本为 **`.xxt` 编译字节码**，须在 **XXTouch IDE** 中对照实际调用名；下列链路按 **文件名语义** 归纳。

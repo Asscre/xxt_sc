@@ -1,0 +1,105 @@
+# 24SC 功能实施进度（与 [`docs/jd-xxtouch-24SC-development-plan.md`](docs/jd-xxtouch-24SC-development-plan.md) 对齐）
+
+详细步骤说明、核对表与验收项见 [`docs/24SC-implementation-guide.md`](docs/24SC-implementation-guide.md)。
+
+## 阶段 A：环境与基线（SC-1～SC-3）
+
+-Done
+
+已在仓库内固化环境前置条件、`main.xxt`/`界面处理主函数.xxt`/`脚本配置界面.xxt`+XUI 的对照模板与 IDE 校准表，供本地完整 `24SC.xpp` 与 XXTouch 逐项填写并保持与源包一致。
+
+## 阶段 B：主流程骨架（SC-4）
+
+-Done
+
+已在 [`docs/24SC-implementation-guide.md`](docs/24SC-implementation-guide.md) 中写入与文档一致的待收货→确认收货→待评价→提交→结束状态机、失败分支表及与 `确认收货或评价主函数.xxt` 的对齐验收项。
+
+## 阶段 C：收菜与评价细节（SC-5～SC-10）
+
+-Done
+
+已按源项目文件名逐模块列出订单列表/确认收货/评价/删除/封装层行为核对项、`res/` 依赖与最小闭环验收，便于 IDE 内实现与源 `.xpp` 行为逐项一致。
+
+## 阶段 D：验证码与恢复（SC-11～SC-12）
+
+-Done
+
+已补充算法滑动与轨迹模块的触发条件、超时重试记录方式，以及 `处理上次出现的界面.xxt` 的杀进程恢复测试步骤，与 [`docs/shared-modules-manifest.md`](docs/shared-modules-manifest.md) 中模块名对齐。
+
+## 阶段 E：与 XD 共用模块（SC-13～SC-15，按需）
+
+-Done
+
+已写明仅展开 SC 链路实际经过的 `下单_*`/地址/代付分支，并列出复登三件套与 `nLog`/`text_replacement` 的脱敏自查项及修改同名共享文件时的双包验证纪律。
+
+## 阶段 F：验证与回归（文档 §3）
+
+-Done
+
+已将文档 §3 转为可勾选清单，并增加京东小版本升级后对 SC-4～SC-8 的回归矩阵；合规与测试账号约束单独成条便于审计。
+
+---
+
+# 24XD 功能实施进度（与 [`docs/jd-xxtouch-24XD-development-plan.md`](docs/jd-xxtouch-24XD-development-plan.md) 对齐）
+
+详细步骤说明、核对表与验收项见 [`docs/24XD-implementation-guide.md`](docs/24XD-implementation-guide.md)。
+
+## 阶段 A：环境与入口绑定（XD-1）
+
+-Done
+
+已在 [`docs/24XD-implementation-guide.md`](docs/24XD-implementation-guide.md) §A 固化 `Info.lua` 入口事实、`main.xxt`/`interface.xuic`/`xui-sub.xuic` 的 IDE 校准清单与完整日志验收项，并与手册 xui/xpp 对齐。
+
+## 阶段 B：下单总状态机（XD-2）
+
+-Done
+
+已在同一指南 §B 写入与文档一致的选品→规格→地址→提交→支付意图状态图及返首页/复登异常出口，便于与源 `下单主函数.xxt` 边界对照。
+
+## 阶段 C：App 内主路径（XD-3）
+
+-Done
+
+已在 §C 给出 `下单_APP下单.xxt` 打断点阶梯与最小闭环（低价测试商品、止步点、基线版本记录）验收。
+
+## 阶段 D：封装与截图模板（XD-4、XD-5）
+
+-Done
+
+已在 §D 提供封装函数表与 `res/` PNG↔截图函数改版对照表模板及验收勾选项。
+
+## 阶段 E：SC 同源界面与地址（XD-6、XD-7、XD-16）
+
+-Done
+
+已在 §E 列出与 `24SC.xpp` 必 diff 的共享文件名及地址用例；并单列 `处理上次出现的界面.xxt` 杀进程恢复与双包冒烟纪律。
+
+## 阶段 F：优惠券与返首页（XD-8、XD-9）
+
+-Done
+
+已在 §F 写明领券是否阻塞下单与返首页触发栈核对项及分支/异常注入验收。
+
+## 阶段 G：支付合规闸门（XD-10、XD-11）
+
+-Done
+
+已在 §G 固化扫码与代付的书面闸门及 §3 禁止硬编码敏感信息的自查项。
+
+## 阶段 H：复登与触控轨迹（XD-12、XD-13）
+
+-Done
+
+已在 §H 对齐复登三件套与 `TouchIOS.xxt`、滑块轨迹模块职责及联合验收。
+
+## 阶段 I：下载与备用代码（XD-14、XD-15）
+
+-Done
+
+已在 §I 明确下载时机/缓存/权限及 `备用代码.xxt` 全局引用检索与归档要求。
+
+## 阶段 J：整体验证与一致性自检（文档 §4 + K）
+
+-Done
+
+已在 §J、§K 将文档 §4 三步验证与「文件/调用/行为/资源」四级一致性自检转为可执行勾选清单。
